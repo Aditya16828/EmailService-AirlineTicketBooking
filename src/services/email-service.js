@@ -15,7 +15,7 @@ const fetchPendingMails = async (filter) => {
     } catch (error) {
         console.log("Unable to fetch Tickets (service layer)");
         console.log(error);
-        throw {error};
+        throw error;
     }
 }
 
@@ -27,7 +27,7 @@ const createTicket = async (data) => {
     } catch (error) {
         console.log("Unable to create ticket");
         console.log(error);
-        throw {error};
+        throw error;
     }
 }
 
@@ -37,7 +37,7 @@ const updateTicket = async (id, data) => {
     } catch (error) {
         console.log("Error in updating ticket (service layer)");
         console.log(error);
-        throw {error};
+        throw error;
     }
 }
 

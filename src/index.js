@@ -18,17 +18,6 @@ const setupAndrunServer = async function (){
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({extended: true}));
 
-        // sendBasicEmail(
-        //     'support@flightservice.com',
-        //     'aditya.airlineserviceproject@gmail.com',
-        //     'Testing Mail',
-        //     'Hello Aditya'
-        // );
-
-        // cron.schedule('*/1 * * * *', () => {
-        //     console.log('running a task every one minute');
-        // });
-
         cronJobs.setupJobs();
 
         app.post('/v1/api/createTicket', NotificationController.createTicket);

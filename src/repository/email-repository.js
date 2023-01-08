@@ -14,11 +14,9 @@ class TicketRepository{
         } catch (error) {
             console.log("Not able to fetch Ticket");
             console.log(error);
-            throw {error};
+            throw error;
         }
     }
-
-    async getTicket(id){}
 
     async removeTicket(){
         try {

@@ -5,7 +5,7 @@ const sender = require('../config/emailConfig');
 
 
 const setupJobs = () => {
-    cron.schedule('*/1 * * * *', async () => {
+    cron.schedule('*/5 * * * *', async () => {
         console.log("Set Mails");
         const response = await NotificationTicketService.fetchPendingMails({status: "Pending"});
         response.forEach((mails) => {
