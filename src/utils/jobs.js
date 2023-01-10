@@ -3,7 +3,6 @@ const {NotificationTicketService} = require('../services/index');
 const sender = require('../config/emailConfig');
 
 
-
 const setupJobs = () => {
     cron.schedule('*/5 * * * *', async () => {
         console.log("Set Mails");

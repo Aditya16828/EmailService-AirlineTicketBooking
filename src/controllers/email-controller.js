@@ -21,4 +21,12 @@ const createTicket = async (req, res) => {
     }
 }
 
-module.exports = {createTicket};
+const getFromQueue = async (channel) => {
+    try{
+        NotificationTicketService.getFromQueue(channel);
+    } catch(error) {
+        throw error;
+    }
+}
+
+module.exports = {createTicket, getFromQueue};
